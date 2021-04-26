@@ -15,7 +15,16 @@ def exercise_1(inputs): # DO NOT CHANGE THIS LINE
     output = [Person, Teacher, Student, Lecture]
     """
     
-    from abc import ABC
+from abc import ABC
+
+p, q, r = inputs
+    
+p => ['t101', 't102', 't103']
+q => ['s101', 's102', 's103']
+r => {
+    'l101':['t101': ['s101', 's102']], 
+    'l102': ['s101', 's102', 's103']]
+}
 
 class Person(ABC):
     def addname(self, name):
@@ -55,6 +64,8 @@ class Lecture:
         for students in students_list:
             print(students.name)
             print(students.student_id)
+    
+    output = [Person, Teacher, Student, Lecture]
     
     output = inputs
 
