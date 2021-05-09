@@ -10,6 +10,8 @@ def exercise_2(inputs): # DO NOT CHANGE THIS LINE
         self.info_attendees[self.family_name] = number_of_attendees
     def detailed_attendees(self, family_names, adult_attendees, child_attendees):
         self.detailed_info_attendees[family_names] = (adult_attendees, child_attendees)
+    def include_priority(self, family_names, attendees, priority):
+        self.detailed_info_attendees[family_names] = (attendees, priority)
     def check_and_resolve(self):
         value = {k: self.detailed_info_attendees[k] for k in set(self.detailed_info_attendees) - set(self.info_attendees)}
         if value == {}:
